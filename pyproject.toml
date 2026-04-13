@@ -1,0 +1,20 @@
+[project]
+name = "elizant-eval"
+version = "0.1.0"
+description = "Reusable eval framework primitives for target drivers and interactive agent evaluation"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "openai>=1.0.0",
+]
+
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.package-dir]
+"" = "src"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["elizant_eval*"]
