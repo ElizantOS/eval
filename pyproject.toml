@@ -1,5 +1,5 @@
 [project]
-name = "elizant-eval"
+name = "eval"
 version = "0.1.0"
 description = "Reusable eval framework primitives for target drivers and interactive agent evaluation"
 readme = "README.md"
@@ -17,4 +17,4 @@ build-backend = "setuptools.build_meta"
 
 [tool.setuptools.packages.find]
 where = ["src"]
-include = ["elizant_eval*"]
+include = ["eval*"]
