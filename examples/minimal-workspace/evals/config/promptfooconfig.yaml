@@ -1,0 +1,17 @@
+# yaml-language-server: $schema=https://promptfoo.dev/config-schema.json
+description: Minimal eval workspace example
+
+prompts:
+  - "{{entry_question}}"
+
+providers:
+  - id: file://../engine/provider.py:call_api
+    label: example-driver
+    config:
+      pythonExecutable: ../.venv/bin/python
+
+tests:
+  - ../.promptfoo/generated-tests.json
+
+evaluateOptions:
+  maxConcurrency: 1

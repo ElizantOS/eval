@@ -1,0 +1,19 @@
+id: demo-responses
+name: Demo Responses Target
+protocol: responses
+driver_class: evals.targets.demo_responses.DemoResponsesDriver
+base_url: http://127.0.0.1:8080
+auth_mode: bearer
+auth_value_ref: DEMO_API_TOKEN
+default_headers: {}
+identity:
+  userId: demo-user
+  currentOrgCode: DEMO
+  currentOrgName: Demo Org
+conversation_mode: previous_response_id
+session_header_name: X-Session-Id
+previous_response_supported: true
+history_strategy: server_managed
+tool_call_shape: responses_items
+tool_result_shape: function_call_output
+clarification_mode: tool_call

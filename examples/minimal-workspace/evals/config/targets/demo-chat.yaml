@@ -1,0 +1,17 @@
+id: demo-chat
+name: Demo Chat Target
+protocol: chat_completions
+driver_class: evals.targets.demo_chat.DemoChatDriver
+base_url: http://127.0.0.1:8081
+auth_mode: bearer
+auth_value_ref: DEMO_API_TOKEN
+default_headers: {}
+identity:
+  userId: demo-user
+  currentOrgCode: DEMO
+  currentOrgName: Demo Org
+conversation_mode: local_history
+history_strategy: client_replay
+tool_call_shape: chat_tool_calls
+tool_result_shape: tool_message
+clarification_mode: tool_call

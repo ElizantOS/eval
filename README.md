@@ -62,6 +62,29 @@ src/eval/
   - `tool` role follow-up
   - chat-completions 风格 history replay
 
+## Example
+
+仓库里带了一个完全泛化的最小示例，不依赖任何私有业务项目：
+
+```text
+examples/minimal-workspace/
+```
+
+里面包含：
+
+- 一个 `responses` target 示例
+- 一个 `chat_completions` target 示例
+- 本地 `driver_class` 绑定样例
+- 两条最小 case
+
+建议阅读顺序：
+
+1. [`examples/minimal-workspace/README.md`](/Users/echo/project/new/ztocc/ztocc-data-smartbot-agent/eval/examples/minimal-workspace/README.md)
+2. `examples/minimal-workspace/evals/config/targets/demo-responses.yaml`
+3. `examples/minimal-workspace/evals/targets/demo_responses.py`
+4. `examples/minimal-workspace/evals/config/targets/demo-chat.yaml`
+5. `examples/minimal-workspace/evals/targets/demo_chat.py`
+
 ## Intended Architecture
 
 推荐的消费方目录结构：
@@ -171,3 +194,15 @@ driver_class: evals.targets.my_target.MyTargetDriver
 2. 本地 target driver 能从 `driver_class` 正确解析
 3. 一个最小单 case run 能跑通
 4. 本地 workspace 的 `.promptfoo/` 和 `runs/` 正常写入
+
+## Non-goals
+
+这个外部仓库当前**不负责**：
+
+- 业务仓库里的 target 配置发布
+- cases 的版本管理
+- runs 历史归档
+- 本地 dashboard 工作区状态
+- 业务项目自己的 `.env` / skills / token 生成脚本
+
+这些都应该留在消费方仓库里，由本地 `evals/` workspace 管理。

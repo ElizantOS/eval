@@ -1,0 +1,11 @@
+default_target_id: demo-responses
+dashboard:
+  host: 127.0.0.1
+  port: 15600
+workspace:
+  targets_dir: config/targets
+  cases_dir: cases
+runner:
+  archive_dir: runs
+  latest_dir: .promptfoo
+  promptfoo_config_file: config/promptfooconfig.yaml
