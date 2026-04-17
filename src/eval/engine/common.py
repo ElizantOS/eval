@@ -12,7 +12,7 @@ from typing import Any
 
 import yaml
 
-from eval.engine.common import (
+from eval.common import (
     EvalConfigError,
     ensure_directory,
     serialize_x_user_info,
