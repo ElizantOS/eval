@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SmartBot Eval Console v2</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <div>
+      <p class="eyebrow">SmartBot Eval Console v2</p>
+      <h1>Target / Case / Run / Trace</h1>
+      <p class="subtitle">主界面只看 Target、历史 Run 和 CaseResult，不再把 case 库和 latest 结果混在一起。</p>
+    </div>
+    <div class="hero-actions">
+      <label class="picker">
+        <span>当前 Target</span>
+        <select id="targetPicker"></select>
+      </label>
+      <button id="refreshAll" class="ghost">刷新数据</button>
+    </div>
+  </header>
+
+  <nav class="topnav" id="topNav">
+    <button class="navtab active" data-view="targets">Targets</button>
+    <button class="navtab" data-view="cases">Cases</button>
+    <button class="navtab" data-view="runs">Run History</button>
+    <button class="navtab" data-view="run-detail">Run Detail</button>
+  </nav>
+
+  <section class="statusbar">
+    <div class="status-card">
+      <span class="status-label">Run 状态</span>
+      <strong id="runStatus">空闲</strong>
+    </div>
+    <div class="status-card">
+      <span class="status-label">当前命令</span>
+      <code id="runCommand">-</code>
+    </div>
+  </section>
+
+  <main id="viewRoot" class="view-root"></main>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>

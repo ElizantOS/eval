@@ -24,6 +24,7 @@ minimal-workspace/
     targets/
       demo_chat.py
       demo_responses.py
+    eval_cli.py
 ```
 
 ## What It Demonstrates
@@ -31,3 +32,4 @@ minimal-workspace/
 - how to depend on the external git package
 - how `driver_class` points at a local target implementation
 - how a local target inherits a protocol base class from `eval`
+- how the local `eval_cli.py` stays as a tiny wrapper around the external package

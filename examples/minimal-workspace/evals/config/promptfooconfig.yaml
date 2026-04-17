@@ -5,7 +5,7 @@ prompts:
   - "{{entry_question}}"
 
 providers:
-  - id: file://../engine/provider.py:call_api
+  - id: file://../eval_cli.py:call_api
     label: example-driver
     config:
       pythonExecutable: ../.venv/bin/python
